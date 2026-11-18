@@ -246,11 +246,17 @@ th{font-family:var(--font-head);color:var(--usb-deep);background:var(--mint)}
 .gloss b{font-family:var(--font-head);color:var(--usb-deep);display:block}
 
 /* footer */
-footer{background:var(--usb-deep);color:#cfeedd;margin-top:20px}
-.foot-in{max-width:1240px;margin:0 auto;padding:30px 16px;display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center}
-.foot-in img{width:76px;height:76px;border-radius:50%;background:#f1f3f2;padding:3px}
-.foot-in b{color:#fff;font-family:var(--font-head);font-size:1.1rem}
-.foot-in small{color:#9fd8b8}
+footer{background:linear-gradient(135deg,var(--usb-deep),var(--usb-dark));color:#cfeedd;margin-top:20px}
+.credits-wrap{max-width:1240px;margin:0 auto;padding:30px 16px}
+.credits{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(53,217,138,.25);border-radius:var(--radius);padding:24px 30px}
+.credits-list{list-style:none;margin:0;padding:0 0 16px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 32px;border-bottom:1px solid rgba(53,217,138,.2)}
+.credits-list li{position:relative;padding-left:18px;font-size:.97rem}
+.credits-list li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--neon);box-shadow:0 0 0 3px rgba(53,217,138,.18)}
+.credits b{color:#fff;font-family:var(--font-head);font-weight:700}
+.credits-ref{margin:14px 0 0;font-size:.9rem;color:#9fd8b8;line-height:1.55}
+.credits-ref b{color:var(--neon)}
+.credits-icon{width:104px;height:104px;border-radius:50%;background:#f1f3f2;padding:4px;box-shadow:0 0 0 5px rgba(53,217,138,.25),0 0 30px rgba(53,217,138,.3)}
+.credits-icon img{width:100%;height:100%;border-radius:50%;object-fit:cover}
 
 svg text{font-family:var(--font-body)}
 
@@ -273,8 +279,9 @@ svg text{font-family:var(--font-body)}
   .srow{grid-template-columns:1fr}
   .srow .lab{text-align:left}
   .match{grid-template-columns:1fr}
-  .foot-in{grid-template-columns:1fr;text-align:center}
-  .foot-in img{margin:0 auto}
+  .credits{grid-template-columns:1fr;padding:20px 18px;gap:20px}
+  .credits-list{grid-template-columns:1fr}
+  .credits-icon{order:-1;margin:0 auto;width:88px;height:88px}
   .card{padding:16px}
   .slots{grid-template-columns:repeat(5,1fr)}
   .progress-in .lbl-long{display:none}
